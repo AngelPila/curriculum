@@ -1,59 +1,159 @@
-
 <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mi Currículum Vitae</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <header>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+    <title>Mi Currículum Vitae</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
         <h1>Angel Eduardo Pilataxi Rodriguez</h1>
         <p>Estudiante | angel.pilataxi123464@gmail.com | 0980064913</p>
-        </header>
-        
-        <nav>
+    </header>
+
+    <nav>
         <ul>
             <li><a href="#resumen">Resumen</a></li>
-            <li><a href="#experiencia">Experiencia</a></li>
             <li><a href="#educacion">Educación</a></li>
             <li><a href="#habilidades">Habilidades</a></li>
             <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
         </ul>
-        </nav>
-        
-        <main>
+    </nav>
+
+    <main>
         <section id="resumen">
             <h2>Resumen</h2>
-            <p>Breve descripción de tus habilidades y experiencia.</p>
+            <p>Mi nombre es Angel, tengo 19 años y soy estudiante de ingeniería en Computación. Me apasiona la
+                tecnología y el desarrollo de software. Adoro el Ping-Pong y los videojuegos.</p>
         </section>
-        
-        <section id="experiencia">
-            <h2>Experiencia</h2>
+
+        <section id="testimonios">
+            <h2>Testimonios</h2>
+            <div class="testimonios-container">
+                <article>
+                    <blockquote>
+                        "Trabajar con usted fue una experiencia enriquecedora, siempre mostró profesionalismo y
+                        dedicación."
+                    </blockquote>
+                    <p><strong>María López</strong><br>
+                        Gerente de Proyectos<br>
+                        María lideró el equipo donde colaboré en el desarrollo de soluciones innovadoras, destacando mi
+                        capacidad de adaptación y trabajo en equipo.</p>
+                </article>
+                <article>
+                    <blockquote>
+                        "Su creatividad y compromiso superaron nuestras expectativas en cada proyecto."
+                    </blockquote>
+                    <p><strong>Carlos Pérez</strong><br>
+                        Director de Tecnología<br>
+                        Carlos fue mi supervisor directo y valoró mi iniciativa para resolver problemas complejos y
+                        aportar ideas frescas al equipo.</p>
+                </article>
+                <article>
+                    <blockquote>
+                        "Demostró habilidades técnicas excepcionales y una actitud positiva ante los desafíos."
+                    </blockquote>
+                    <p><strong>Lucía Fernández</strong><br>
+                        Líder de Recursos Humanos<br>
+                        Lucía coordinó varios proyectos donde participé, resaltando mi responsabilidad y capacidad para
+                        trabajar bajo presión.</p>
+                </article>
+            </div>
         </section>
-        
         <section id="educacion">
             <h2>Educación</h2>
+            <ul>
+                <li>Ingeniería en Computación - ESPOL (2024 - Presente)</li>
+                <li>Bachillerato en Ciencias - Unidad Educativa "Claire Bucaram de Aivas" (2016 - 2024)</li>
+            </ul>
+            <div id="map" style="height: 300px; margin-top: 20px;"></div>
+            <script>
+                // Inicializa el mapa centrado en ESPOL, Guayaquil, Ecuador
+                var map = L.map('map').setView([-2.147, -79.964], 15);
+                // Añade capa base de OpenStreetMap
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '© OpenStreetMap contributors'
+                }).addTo(map);
+                // Marcador para ESPOL
+                L.marker([-2.147, -79.964]).addTo(map)
+                    .bindPopup('ESPOL - Escuela Superior Politécnica del Litoral')
+                    .openPopup();
+            </script>
         </section>
-        
+
         <section id="habilidades">
             <h2>Habilidades</h2>
+            <ul>
+                <li>Habilidad 1</li>
+                <li>Habilidad 2</li>
+                <li>Habilidad 3</li>
+            </ul>
         </section>
-        
+
         <section id="proyectos">
             <h2>Proyectos</h2>
+            <table>
+                <th>
+                    <tr>
+                        <th>Nombre del Proyecto</th>
+                        <th>Descripción</th>
+                        <th>Link</th>
+                    </tr>
+                </th>
+                <tr>
+                    <td>Propuesta de Solucion - Hackaton Nasa Space Apps</td>
+                    <td>Descripción del proyecto 1</td>
+                    <td><a href="#">Enlace al proyecto</a></td>
+                </tr>
+                <tr>
+                    <td>Proyecto 2</td>
+                    <td>Descripción del proyecto 2</td>
+                    <td><a href="#">Enlace al proyecto</a></td>
+                </tr>
+                <tr>
+                    <td>Proyecto 3</td>
+                    <td>Descripción del proyecto 3</td>
+                    <td><a href="#">Enlace al proyecto</a></td>
+                </tr>
+            </table>
+            
         </section>
-        </main>
-        
-        <footer>
-        <p>© Tu Nombre - 2023</p>
+    </main>
+
+    <footer>
+        <p>© Angel Pilataxi - 2025</p>
+        <form action="mailto:angel.pilataxi123464@gmail.com" method="post" enctype="text/plain" style="margin-top: 20px;">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="motivo">Motivo de contacto:</label>
+            <select id="motivo" name="motivo" required>
+                <option value="">Seleccione una opción</option>
+                <option value="consulta">Consulta</option>
+                <option value="propuesta">Propuesta laboral</option>
+                <option value="colaboracion">Colaboración</option>
+                <option value="otro">Otro</option>
+            </select>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
         <ul>
             <li><a href="https://www.linkedin.com/in/tunombre">LinkedIn</a></li>
             <li><a href="https://github.com/tunombre">GitHub</a></li>
         </ul>
-        </footer>
-    </body>
-    </html>
+    </footer>
+</body>
 
-
+</html>
