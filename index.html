@@ -5,22 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-     crossorigin=""/>
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-     crossorigin=""></script>
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <title>Mi Currículum Vitae</title>
     <link rel="stylesheet" href="/stylesheets/styles.css">
 </head>
 
 <body>
     <header>
-        <h1>Angel Eduardo Pilataxi Rodriguez</h1>
-        <p>Estudiante | angel.pilataxi123464@gmail.com | 0980064913</p>
+           <img src="https://i.imgur.com/1Q9Z1ZB.jpg" alt="Foto de perfil de Angel Pilataxi" id="photo" />
+           <h1>Angel Eduardo Pilataxi Rodriguez</h1>
+           <p>Estudiante | angel.pilataxi123464@gmail.com | 0980064913</p>
     </header>
 
-    <nav>
         <ul>
             <li><a href="#resumen">Resumen</a></li>
             <li><a href="#educacion">Educación</a></li>
@@ -32,13 +35,13 @@
 
     <main>
         <section id="resumen">
-            <h2>Resumen</h2>
+            <h2 class="subtitle">Resumen</h2>
             <p>Mi nombre es Angel, tengo 19 años y soy estudiante de ingeniería en Computación. Me apasiona la
                 tecnología y el desarrollo de software. Adoro el Ping-Pong y los videojuegos.</p>
         </section>
 
         <section id="testimonios">
-            <h2>Testimonios</h2>
+            <h2 class="subtitle">Testimonios</h2>
             <div class="testimonios-container">
                 <article>
                     <blockquote>
@@ -71,7 +74,7 @@
             </div>
         </section>
         <section id="educacion">
-            <h2>Educación</h2>
+            <h2 class="subtitle">Educación</h2>
             <ul>
                 <li>Ingeniería en Computación - ESPOL (2024 - Presente)</li>
                 <li>Bachillerato en Ciencias - Unidad Educativa "Claire Bucaram de Aivas" (2016 - 2024)</li>
@@ -92,7 +95,7 @@
         </section>
 
         <section id="habilidades">
-            <h2>Habilidades</h2>
+            <h2 class="subtitle">Habilidades</h2>
             <ul>
                 <li>Habilidad 1</li>
                 <li>Habilidad 2</li>
@@ -101,7 +104,7 @@
         </section>
 
         <section id="proyectos">
-            <h2>Proyectos</h2>
+            <h2 class="subtitle">Proyectos</h2>
             <table>
                 <th>
                     <tr>
@@ -126,13 +129,13 @@
                     <td><a href="#">Enlace al proyecto</a></td>
                 </tr>
             </table>
-            
+
         </section>
     </main>
 
     <footer>
-        <p>© Angel Pilataxi - 2025</p>
-        <form action="mailto:angel.pilataxi123464@gmail.com" method="post" enctype="text/plain" style="margin-top: 20px;">
+        <form action="mailto:angel.pilataxi123464@gmail.com" method="post" enctype="text/plain"
+            style="margin-top: 20px;">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
             <label for="email">Correo electrónico:</label>
@@ -153,6 +156,8 @@
             <li><a href="https://www.linkedin.com/in/tunombre">LinkedIn</a></li>
             <li><a href="https://github.com/tunombre">GitHub</a></li>
         </ul>
+        <p>© Angel Pilataxi - 2025</p>
+
     </footer>
 </body>
 
