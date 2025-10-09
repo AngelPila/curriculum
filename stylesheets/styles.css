@@ -2,7 +2,6 @@
   font-family: 'Noticia Text', 'Sanchez', 'Scope One', serif;
 }
 
-/* Estilos para las secciones */
 section {
     border: 0.2pt solid #cedddd;
     margin: 4px 2px 8px 2px;
@@ -24,10 +23,8 @@ h1{
 
 .subtitle {
 
-    /* Color del texto en rgba */
     color: rgb(151 156 165 / 0.89);
 
-    /* Transformación del texto a mayúsculas */
     text-transform: uppercase;
 }
 footer p{
@@ -40,4 +37,38 @@ nav > ul {
 
     list-style: none;
 
+}
+#profile-pic {
+    width: 12vw;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+table {
+    border-collapse: collapse;
+
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    border-color: aquamarine;
+
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto; /* Centra el formulario */
+}
+form label,
+form input,
+form select,
+form textarea,
+form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
 }

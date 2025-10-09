@@ -19,18 +19,18 @@
 
 <body>
     <header>
-           <img src="https://i.imgur.com/1Q9Z1ZB.jpg" alt="Foto de perfil de Angel Pilataxi" id="photo" />
-           <h1>Angel Eduardo Pilataxi Rodriguez</h1>
-           <p>Estudiante | angel.pilataxi123464@gmail.com | 0980064913</p>
+        <img src="/img/FOTO_ANGEL_PILATAXI.jpg" alt="Foto de perfil de Angel Pilataxi" id="profile-pic" />
+        <h1>Angel Eduardo Pilataxi Rodriguez</h1>
+        <p>Estudiante | angel.pilataxi123464@gmail.com | 0980064913</p>
     </header>
 
-        <ul>
-            <li><a href="#resumen">Resumen</a></li>
-            <li><a href="#educacion">Educación</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#testimonios">Testimonios</a></li>
-        </ul>
+    <ul>
+        <li><a href="#resumen">Resumen</a></li>
+        <li><a href="#educacion">Educación</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#testimonios">Testimonios</a></li>
+    </ul>
     </nav>
 
     <main>
@@ -82,7 +82,7 @@
             <div id="map" style="height: 300px; margin-top: 20px;"></div>
             <script>
                 // Inicializa el mapa centrado en ESPOL, Guayaquil, Ecuador
-                var map = L.map('map').setView([-2.147, -79.964], 15);
+                var map = L.map('map').setView([-2.12, -79.8875], 12);
                 // Añade capa base de OpenStreetMap
                 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                     attribution: '© OpenStreetMap contributors'
@@ -91,6 +91,9 @@
                 L.marker([-2.147, -79.964]).addTo(map)
                     .bindPopup('ESPOL - Escuela Superior Politécnica del Litoral')
                     .openPopup();
+                // Marcador para Unidad Educativa "Claire Bucaram de Aivas"
+                L.marker([-2.1107389821408082, -79.90313746465876]).addTo(map)
+                    .bindPopup('Unidad Educativa "Claire Bucaram de Aivas"');
             </script>
         </section>
 
@@ -106,13 +109,12 @@
         <section id="proyectos">
             <h2 class="subtitle">Proyectos</h2>
             <table>
-                <th>
-                    <tr>
-                        <th>Nombre del Proyecto</th>
-                        <th>Descripción</th>
-                        <th>Link</th>
-                    </tr>
-                </th>
+                <tr>
+                    <th>Nombre del Proyecto</th>
+                    <th>Descripción</th>
+                    <th>Link</th>
+                </tr>
+
                 <tr>
                     <td>Propuesta de Solucion - Hackaton Nasa Space Apps</td>
                     <td>Descripción del proyecto 1</td>
