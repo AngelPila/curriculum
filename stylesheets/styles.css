@@ -1,3 +1,9 @@
+section > form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1rem;
+    column-gap: 1rem;
+}
 * {
   font-family: 'Noticia Text', 'Sanchez', 'Scope One', serif;
 }
@@ -36,7 +42,11 @@ footer p{
 nav > ul {
 
     list-style: none;
-
+    display: flex; /* Activa flexbox */
+    justify-content: space-around; /* Espacio equitativo entre elementos */
+    flex-direction: row; /* Organiza en fila horizontal */
+    align-items: center; /* Centra verticalmente los hijos */
+    gap: 1rem; /* Espacio uniforme entre elementos */
 }
 #profile-pic {
     width: 12vw;
@@ -59,16 +69,26 @@ th, td {
 
 }
 
-form {
-  max-width: 400px;
-  margin: 0 auto; /* Centra el formulario */
+/* Estilos para la sección de referencias/testimonios (usando Grid) */
+/* Hacer que el subtítulo ocupe todo el ancho y los 3 articles compartan el espacio equitativamente */
+#testimonios {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem; /* separación entre filas */
 }
-form label,
-form input,
-form select,
-form textarea,
-form button {
-  display: block;
-  width: 100%;
-  margin-bottom: 12px;
+
+#testimonios > .subtitle {
+    grid-column: 1 / -1; /* ocupa todo el ancho del grid */
+    width: 100%;
 }
+
+.testimonios-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* tres columnas iguales */
+    gap: 1rem; /* separación entre columnas y filas */
+}
+
+.testimonios-container > article {
+    min-width: 0; /* evita overflow en contenedores grid */
+}
+
